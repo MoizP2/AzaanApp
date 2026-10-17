@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Azaan</title>
+<meta name="theme-color" content="#0b3d2e">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.svg">
+<style>
+  body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;
+       font-family:system-ui,-apple-system,sans-serif;background:#0b3d2e;color:#fff;text-align:center}
+  h1{font-size:22px;margin:8px 0 0}
+  #clock{font-size:52px;font-weight:600;margin:14px 0 4px;font-variant-numeric:tabular-nums}
+  #next{opacity:.85;margin-bottom:20px;min-height:1.2em}
+  table{width:100%;max-width:360px;border-collapse:collapse}
+  td{padding:12px 4px;border-bottom:1px solid #ffffff22;font-size:17px}
+  td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+  tr.active td{font-weight:700;color:#ffd77a}
+  .buttons{margin-top:18px}
+  button{background:#ffd77a;color:#0b3d2e;border:0;border-radius:10px;padding:12px 16px;font-size:15px;margin:6px 4px;font-weight:600}
+  #status{font-size:14px;opacity:.85;margin-top:16px;min-height:1.2em}
+</style>
+</head>
+<body>
+<h1>Azaan</h1>
+<div id="clock">--:--:--</div>
+<div id="next">Loading prayer times…</div>
+<table id="times"></table>
+<div class="buttons">
+  <button id="enable">Enable sound &amp; alerts</button>
+  <button id="test">Test azaan</button>
+  <button id="refresh">Refresh times</button>
+</div>
+<div id="status"></div>
+<audio id="player" src="azaan.mp3" preload="auto"></audio>
+<script src="app.js"></script>
+</body>
+</html>
